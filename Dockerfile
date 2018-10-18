@@ -5,8 +5,11 @@ MAINTAINER Andrei Mihalciuc <andrei.mihalciuc@gmail.com>
 RUN apt-get update && apt-get -y install build-essential
 
 # install our dependencies and nodejs
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list && \
-    apt-get update 
+RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list \
+    && apt-get update \
+    && apt-get -yq install bash git openssh-server curl \
+    && apt-get -yq clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install Node
 RUN   \

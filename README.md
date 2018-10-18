@@ -1,3 +1,3 @@
 # bamboo-nodejs-agent
 
-#### Bamboo, node, npm all-in-one
+#### Bamboo, git, bash, curl, node & npm all-in-one
