@@ -14,7 +14,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 # Install Node
 RUN   \
   cd /opt && \
-  wget http://nodejs.org/dist/latest-v8.x/node-v8.12.0-linux-x64.tar.gz && \
+  wget https://nodejs.org/dist/v8.12.0/node-v8.12.0-linux-x64.tar.gz && \
   tar -xzf node-v8.12.0-linux-x64.tar.gz && \
   mv node-v8.12.0-linux-x64 node && \
   cd /usr/local/bin && \
